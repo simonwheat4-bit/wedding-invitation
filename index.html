@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Wedding Invitation | Daughter of Nawaz Qureshi & Ubaid ur Rehman</title>
+  
+  <!-- Meta for Social Sharing (WhatsApp, Facebook, Twitter) -->
+  <meta property="og:title" content="Wedding Invitation — Daughter of Nawaz Qureshi & Ubaid ur Rehman">
+  <meta property="og:description" content="Together with our families, we invite you to celebrate our wedding ceremony on Tuesday, 12 January 2027 at Data Hall (C), Karachi.">
+  <meta property="og:image" content="images/pakistani_couple.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Canvas Confetti & Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              light: '#f7e7ce',
+              DEFAULT: '#c5a059',
+              dark: '#936a28',
+              metallic: '#d4af37'
+            },
+            rosewood: '#3c2420',
+            cream: '#fdfbf7',
+            blush: '#f9f3ec',
+            warmgray: '#8a7e78'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            script: ['"Alex Brush"', 'cursive'],
+            sans: ['Montserrat', 'sans-serif'],
+            arabic: ['Amiri', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fdfbf7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d4af37;
+      border-radius: 4px;
+    }
+
+    /* Ambient Gold Shimmer Animations */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .gold-shimmer {
+      background: linear-gradient(90deg, #b8860b 0%, #ffd700 25%, #d4af37 50%, #ffd700 75%, #b8860b 100%);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      animation: shimmer 5s linear infinite;
+    }
+
+    @keyframes pulse-gold {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.45), 0 10px 30px rgba(184, 134, 11, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 0 16px rgba(212, 175, 55, 0), 0 15px 45px rgba(212, 175, 55, 0.5);
+      }
+    }
+    .seal-pulse {
+      animation: pulse-gold 2.5s infinite;
+    }
+
+    @keyframes buttonShine {
+      0% { transform: translateX(-120%) skewX(-20deg); }
+      100% { transform: translateX(250%) skewX(-20deg); }
+    }
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.55) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      animation: buttonShine 3s ease-in-out infinite;
+    }
+
+    /* Ivory & Royal Gold Theme (Matching Reference Image) */
+    .ivory-cover-bg {
+      background-color: #faf5ed;
+      background-image: 
+        radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.9) 0%, rgba(250, 243, 230, 0.8) 50%, rgba(243, 231, 212, 0.95) 100%),
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 50%);
+    }
+
+    .ivory-card-frame {
+      background: rgba(255, 253, 249, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(212, 175, 55, 0.6);
+      box-shadow: 
+        0 20px 60px -15px rgba(140, 105, 50, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset,
+        0 0 40px rgba(212, 175, 55, 0.15);
+    }
+
+    .gold-foil-btn {
+      background: linear-gradient(180deg, #fcedc5 0%, #e2be67 35%, #c59b3b 70%, #ad8225 100%);
+      border: 1.5px solid #997320;
+      box-shadow: 
+        0 6px 20px rgba(173, 130, 37, 0.35),
+        inset 0 1.5px 1px rgba(255, 255, 255, 0.8),
+        inset 0 -1.5px 1px rgba(120, 85, 20, 0.4);
+    }
+
+    /* Scroll Triggered Animations */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-scale {
+      opacity: 0;
+      transform: scale(0.92) translateY(24px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-scale.is-visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.25s; }
+    .stagger-3 { transition-delay: 0.4s; }
+
+
+    /* Floating Petals / Particles */
+    .petal {
+      position: absolute;
+      background: radial-gradient(circle, rgba(235, 185, 175, 0.85) 0%, rgba(220, 150, 140, 0.2) 70%, transparent 100%);
+      border-radius: 50% 0 50% 50%;
+      pointer-events: none;
+      animation: floatPetal linear infinite;
+    }
+    @keyframes floatPetal {
+      0% {
+        transform: translateY(-50px) rotate(0deg) scale(0.8);
+        opacity: 0;
+      }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% {
+        transform: translateY(105vh) rotate(360deg) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Audio Equalizer animation */
+    .bar {
+      display: inline-block;
+      width: 3px;
+      height: 12px;
+      margin: 0 1.5px;
+      background-color: #d4af37;
+      border-radius: 2px;
+      animation: soundBars 1s ease-in-out infinite alternate;
+    }
+    .bar:nth-child(1) { animation-duration: 0.8s; }
+    .bar:nth-child(2) { animation-duration: 1.2s; }
+    .bar:nth-child(3) { animation-duration: 0.9s; }
+    .bar:nth-child(4) { animation-duration: 1.4s; }
+    @keyframes soundBars {
+      0% { height: 4px; }
+      100% { height: 18px; }
+    }
+    .paused .bar {
+      animation: none !important;
+      height: 4px !important;
+    }
+
+    /* Luxurious Textured Background */
+    .paper-texture {
+      background-color: #fdfbf7;
+      background-image: 
+        radial-gradient(#c5a059 0.45px, transparent 0.45px),
+        radial-gradient(#d4af37 0.45px, #fdfbf7 0.45px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }
+
+    /* Envelope 3D Fold Transition */
+    .envelope-cover {
+      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.9s ease;
+    }
+    .envelope-cover.opened {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Smooth Image Frame */
+    .vintage-frame {
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      outline: 10px solid rgba(253, 251, 247, 0.85);
+      box-shadow: 0 15px 40px -10px rgba(90, 60, 40, 0.18), 0 0 0 1px rgba(212, 175, 55, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-[#121110] text-[#2c2420] antialiased selection:bg-gold-light selection:text-gold-dark overflow-x-hidden font-serif">
+
+  <!-- Background Music Audio Element -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music/Enchanted-Orchestral.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Floating Top Navigation & Audio Controller -->
+  <aside aria-label="Controls" class="fixed top-4 left-4 right-4 z-40 flex items-center justify-between pointer-events-none max-w-xl mx-auto">
+    <!-- Back to Cover Button -->
+    <button id="backToCoverBtn" onclick="closeInvitation()" class="pointer-events-auto flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-gold/60 shadow-lg text-xs font-cinzel font-bold text-rosewood hover:border-gold hover:bg-gold-light/20 hover:scale-105 active:scale-95 transition-all">
+      <i data-lucide="chevron-left" class="w-4 h-4 text-gold-dark"></i>
+      <span class="tracking-wider uppercase text-[10px]">Back to Cover</span>
+    </button>
+
+    <!-- Music Button -->
+    <button id="musicToggle" class="pointer-events-auto flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 backdrop-blur-md border border-gold/60 shadow-lg text-xs font-sans font-medium text-rosewood hover:border-gold hover:shadow-xl transition-all">
+      <div id="soundBars" class="flex items-end h-4 paused">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <span id="musicStatusText" class="tracking-wider uppercase text-[10px] font-semibold text-gold-dark">Music</span>
+      <i id="musicIcon" data-lucide="volume-x" class="w-3.5 h-3.5 text-gold-dark"></i>
+    </button>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- 1. LUXURY IVORY & ROYAL GOLD COVER SCREEN (MATCHING REFERENCE IMAGE) -->
+  <!-- ========================================================================= -->
+  <div id="openingModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 ivory-cover-bg text-[#282015] envelope-cover select-none overflow-y-auto">
+    
+    <!-- Floating ambient sparkles & petals -->
+    <div id="introPetals" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+    <!-- The Grand Royal Mughal Folio Card -->
+    <div class="relative z-10 ivory-card-frame max-w-[440px] w-full rounded-[2.5rem] px-6 py-7 sm:px-8 sm:py-8 text-center overflow-hidden my-auto">
+      
+      <!-- Hanging Lanterns (Fanoos) on Left and Right -->
+      <div class="absolute top-2 left-4 w-7 sm:w-8 pointer-events-none opacity-90 drop-shadow-md">
+        <svg viewBox="0 0 40 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+          <line x1="20" y1="0" x2="20" y2="35" stroke="#c5a059" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <path d="M12 35 C12 35, 20 28, 28 35 L32 55 C32 65, 20 72, 20 72 C20 72, 8 65, 8 55 Z" fill="#fff6d6" stroke="#b8860b" stroke-width="1.5"/>
+          <circle cx="20" cy="52" r="5" fill="#ffd700" filter="drop-shadow(0 0 6px #ffae00)"/>
+          <line x1="20" y1="72" x2="20" y2="85" stroke="#b8860b" stroke-width="1.5"/>
+          <circle cx="20" cy="85" r="2" fill="#b8860b"/>
+        </svg>
+      </div>
+
+      <div class="absolute top-2 right-4 w-7 sm:w-8 pointer-events-none opacity-90 drop-shadow-md">
+        <svg viewBox="0 0 40 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+          <line x1="20" y1="0" x2="20" y2="35" stroke="#c5a059" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <path d="M12 35 C12 35, 20 28, 28 35 L32 55 C32 65, 20 72, 20 72 C20 72, 8 65, 8 55 Z" fill="#fff6d6" stroke="#b8860b" stroke-width="1.5"/>
+          <circle cx="20" cy="52" r="5" fill="#ffd700" filter="drop-shadow(0 0 6px #ffae00)"/>
+          <line x1="20" y1="72" x2="20" y2="85" stroke="#b8860b" stroke-width="1.5"/>
+          <circle cx="20" cy="85" r="2" fill="#b8860b"/>
+        </svg>
+      </div>
+
+      <!-- Top Grand Mughal Arch Decoration -->
+      <div class="max-w-[220px] mx-auto mb-2 opacity-85">
+        <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+          <path d="M10 35 C40 15, 70 8, 100 8 C130 8, 160 15, 190 35" stroke="#c5a059" stroke-width="1.5"/>
+          <path d="M30 35 C60 20, 80 15, 100 15 C120 15, 140 20, 170 35" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3"/>
+          <circle cx="100" cy="8" r="3" fill="#c5a059"/>
+        </svg>
+      </div>
+
+      <!-- Bismillah In Arabic (Deep Emerald-Bronze) -->
+      <div class="mb-3">
+        <div class="font-arabic text-2xl sm:text-3xl text-[#1a3826] font-bold drop-shadow-xs leading-relaxed">
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </div>
+        <p class="font-cinzel text-[9px] sm:text-[10px] tracking-[0.32em] uppercase text-[#1a3826]/80 font-bold">
+          In The Name Of Almighty Allah
+        </p>
+      </div>
+
+      <!-- Ornate Royal Gold Monogram Crest (U & J - One Single Clean Line) -->
+      <div class="my-3.5 inline-block">
+        <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-[#c5a059] flex items-center justify-center p-2 seal-pulse bg-gradient-to-b from-[#fffef9] via-[#fbf3e2] to-[#f4e2be] mx-auto shadow-lg relative">
+          <!-- Inner Decorative Ring with Generous Spacing -->
+          <div class="w-full h-full rounded-full border border-dashed border-[#b8860b]/80 flex flex-col items-center justify-center relative bg-white/60 shadow-inner px-2">
+            <span class="font-cinzel text-[9px] sm:text-[10px] tracking-[0.35em] uppercase text-[#8a6320] font-bold mb-1">The Wedding</span>
+            <span class="font-script text-4xl sm:text-5xl text-[#1a3826] font-bold whitespace-nowrap leading-none my-0.5 drop-shadow-xs block">U &amp; J</span>
+            <span class="font-cinzel text-[9px] sm:text-[10px] tracking-[0.35em] uppercase text-[#8a6320] font-bold mt-1">2027</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cordially Inviting You To -->
+      <div class="my-1.5 flex items-center justify-center gap-2">
+        <span class="h-px w-6 bg-gold/50"></span>
+        <p class="font-cinzel text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#1a3826] font-bold">
+          Cordially Inviting You To
+        </p>
+        <span class="h-px w-6 bg-gold/50"></span>
+      </div>
+
+      <!-- Couple Names in Regal Emerald-Forest Script (Barat Order: Bride First, Groom With) -->
+      <div class="my-2.5">
+        <h1 class="font-serif italic text-2xl sm:text-3xl text-[#1a3826] font-bold tracking-tight">
+          Daughter of Nawaz Qureshi
+        </h1>
+        <div class="flex items-center justify-center gap-3 my-0.5">
+          <span class="h-px w-8 bg-gold/50"></span>
+          <span class="font-script text-2xl text-gold-dark font-bold">&amp;</span>
+          <span class="h-px w-8 bg-gold/50"></span>
+        </div>
+        <h2 class="font-serif italic text-3xl sm:text-4xl text-[#1a3826] font-bold tracking-tight">
+          Ubaid ur Rehman
+        </h2>
+      </div>
+
+      <!-- Date & Venue Capsule (Gold Pill as shown in Reference) -->
+      <div class="my-4 space-y-1.5 max-w-xs mx-auto">
+        <div class="py-1.5 px-4 rounded-full border border-[#c5a059] bg-[#fffdf9] shadow-xs flex items-center justify-center gap-2">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-gold-dark"></i>
+          <span class="font-cinzel text-xs font-bold tracking-[0.18em] uppercase text-[#1a3826]">
+            Tuesday, 12 January 2027
+          </span>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-[10px] font-sans font-bold uppercase tracking-wider text-[#1a3826]/80">
+          <span class="flex items-center gap-1">
+            <i data-lucide="clock" class="w-3 h-3 text-gold-dark"></i>
+            09:00 PM
+          </span>
+          <span>•</span>
+          <span class="flex items-center gap-1">
+            <i data-lucide="map-pin" class="w-3 h-3 text-gold-dark"></i>
+            Data Hall (C), Karachi
+          </span>
+        </div>
+      </div>
+
+      <!-- Gleaming Royal Gold Button -->
+      <div class="mt-4 mb-2">
+        <button id="openInviteBtn" class="btn-shimmer gold-foil-btn group w-full py-3.5 px-6 rounded-full text-[#241a16] font-cinzel font-black text-xs sm:text-sm tracking-[0.25em] uppercase transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2.5 shadow-md">
+          <i data-lucide="mail-open" class="w-4 h-4 text-[#241a16]"></i>
+          <span>Open Invitation</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#241a16] transition-transform group-hover:translate-x-1"></i>
+        </button>
+      </div>
+
+      <!-- Prompt with Note Icon -->
+      <p class="mt-2.5 text-[10px] sm:text-[11px] font-sans text-rosewood/75 font-medium tracking-wide flex items-center justify-center gap-1.5">
+        <i data-lucide="music" class="w-3 h-3 text-gold-dark"></i>
+        <span>Tap to reveal invitation with royal music</span>
+      </p>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. MAIN INVITATION CARD CONTENT -->
+  <!-- ========================================================================= -->
+  <main class="min-h-screen bg-[#1c1917] py-6 sm:py-12 px-3 sm:px-6 flex justify-center relative">
+    
+    <!-- Floating floral petals generator container -->
+    <div id="mainPetals" class="fixed inset-0 pointer-events-none z-10 overflow-hidden"></div>
+
+    <!-- The Royal Paper Card Container (Standard Luxury Digital Card Canvas) -->
+    <div class="w-full max-w-[620px] bg-[#fdfbf7] shadow-[0_25px_70px_rgba(0,0,0,0.6)] rounded-2xl overflow-hidden border border-[#d4af37]/40 relative text-center">
+
+      <!-- Golden Corner Filigree Ornaments -->
+      <div class="absolute top-3 left-3 w-12 h-12 border-t-2 border-l-2 border-gold/60 pointer-events-none"></div>
+      <div class="absolute top-3 right-3 w-12 h-12 border-t-2 border-r-2 border-gold/60 pointer-events-none"></div>
+      <div class="absolute bottom-3 left-3 w-12 h-12 border-b-2 border-l-2 border-gold/60 pointer-events-none"></div>
+      <div class="absolute bottom-3 right-3 w-12 h-12 border-b-2 border-r-2 border-gold/60 pointer-events-none"></div>
+
+      <!-- Top Header Floral Arch Ornament -->
+      <div class="pt-8 sm:pt-10 px-6 sm:px-10 pb-4 relative scroll-reveal">
+        <img src="images/ornament.webp" alt="Ornament" class="w-24 sm:w-28 mx-auto opacity-70 mb-3 filter sepia" onerror="this.style.display='none'">
+
+        <!-- Bismillah In Arabic -->
+        <div class="font-arabic text-2xl sm:text-3xl text-gold-dark mb-1 leading-relaxed">
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </div>
+        
+        <p class="font-cinzel text-[10px] sm:text-xs tracking-[0.28em] uppercase text-rosewood/80 font-bold mb-6">
+          In The Name Of Almighty Allah<br>
+          <span class="text-[9px] sm:text-[10px] tracking-[0.2em] font-medium text-warmgray">The Most Beneficent, The Most Merciful</span>
+        </p>
+
+        <!-- Host / Parents Announcement -->
+        <div class="relative py-2">
+          <div class="inline-block relative">
+            <h2 class="font-cinzel text-base sm:text-lg font-bold tracking-[0.2em] uppercase text-rosewood">
+              Mr. &amp; Mrs. Nawaz Qureshi
+            </h2>
+            <div class="h-0.5 w-16 bg-gold mx-auto mt-2"></div>
+          </div>
+          
+          <p class="font-serif italic text-base sm:text-lg text-rosewood/80 mt-3 leading-relaxed">
+            is happy to invite you to celebrate their daughter
+          </p>
+          <p class="font-cinzel text-xs sm:text-sm tracking-[0.25em] uppercase font-bold text-gold-dark mt-1">
+            Wedding Ceremony
+          </p>
+        </div>
+      </div>
+
+      <!-- Couple Focus Block -->
+      <div class="py-4 px-6 sm:px-10 relative scroll-reveal stagger-1">
+        
+        <!-- Bride Reference -->
+        <div class="mb-2">
+          <span class="font-script text-3xl sm:text-4xl text-rosewood block mb-0.5">Daughter of</span>
+          <span class="font-cinzel text-sm sm:text-base font-bold tracking-[0.18em] uppercase text-rosewood">
+            Nawaz Qureshi
+          </span>
+        </div>
+
+        <!-- Ornate WITH Divider -->
+        <div class="flex items-center justify-center my-2">
+          <span class="h-px w-16 bg-gold/50"></span>
+          <span class="font-cinzel text-xs tracking-[0.3em] font-semibold text-gold-dark px-4 uppercase">WITH</span>
+          <span class="h-px w-16 bg-gold/50"></span>
+        </div>
+
+        <!-- Groom Name -->
+        <div class="mt-2 mb-4">
+          <h1 class="font-script text-4xl sm:text-5xl text-rosewood font-normal tracking-wide gold-shimmer">
+            Ubaid ur Rehman
+          </h1>
+          <p class="font-cinzel text-[11px] sm:text-xs tracking-[0.15em] uppercase font-semibold text-rosewood/80 mt-1">
+            S/O Mr. Aqeel Ahmed Farooqi (Late)
+          </p>
+        </div>
+
+        <!-- Quranic Blessings Card -->
+        <div class="my-5 p-4 rounded-xl bg-blush/60 border border-gold/30 text-rosewood/90 text-xs sm:text-sm italic leading-relaxed shadow-sm">
+          "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."
+          <span class="block font-sans not-italic text-[10px] font-semibold text-gold-dark uppercase tracking-widest mt-1.5">— Surah Ar-Rum (30:21)</span>
+        </div>
+      </div>
+
+      <!-- Couple & Pakistani Wedding Floral Arch Artwork -->
+      <div class="px-6 sm:px-10 my-4 scroll-scale">
+        <div class="vintage-frame rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl" onclick="openPhotoModal()">
+          <img src="images/pakistani_couple.jpg" alt="Pakistani Bride and Groom - Wedding Ceremony" class="w-full h-80 sm:h-96 object-cover object-top transition-transform duration-700 group-hover:scale-105">
+        </div>
+      </div>
+
+      <!-- Mark The Date Calendar Banner -->
+      <div class="py-6 px-6 sm:px-10 bg-gradient-to-b from-transparent via-[#f5ede3]/70 to-transparent my-4 scroll-reveal">
+        <div class="font-cinzel text-xs tracking-[0.3em] uppercase text-gold-dark font-bold mb-3 flex items-center justify-center gap-2">
+          <i data-lucide="calendar-heart" class="w-4 h-4 text-gold"></i>
+          <span>Mark The Date</span>
+        </div>
+
+        <!-- Date Display (Matching Card Structure) -->
+        <div class="flex items-center justify-center gap-4 sm:gap-6 my-2">
+          <div class="text-right">
+            <span class="block font-cinzel text-xs sm:text-sm tracking-wider uppercase font-bold text-rosewood">ON</span>
+            <span class="block font-cinzel text-xs sm:text-sm tracking-widest uppercase font-semibold text-warmgray">TUESDAY</span>
+          </div>
+
+          <!-- Day 12 with Ornate Gold Dividers -->
+          <div class="px-5 sm:px-7 py-1.5 border-x-2 border-gold flex items-center justify-center">
+            <span class="font-cinzel text-4xl sm:text-5xl font-black text-rosewood tracking-tighter">12</span>
+          </div>
+
+          <div class="text-left">
+            <span class="block font-cinzel text-xs sm:text-sm tracking-wider uppercase font-bold text-rosewood">JANUARY</span>
+            <span class="block font-cinzel text-xs sm:text-sm tracking-widest uppercase font-semibold text-warmgray">2027</span>
+          </div>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="mt-6 pt-5 border-t border-gold/30">
+          <p class="font-cinzel text-[11px] tracking-[0.25em] uppercase text-rosewood/70 font-semibold mb-3">
+            Counting Down To The Big Day
+          </p>
+          <div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-sm mx-auto">
+            <div class="bg-white/80 border border-gold/30 rounded-xl p-2.5 shadow-sm">
+              <span id="days" class="font-cinzel text-xl sm:text-2xl font-bold text-gold-dark block">00</span>
+              <span class="font-sans text-[9px] uppercase tracking-wider text-warmgray">Days</span>
+            </div>
+            <div class="bg-white/80 border border-gold/30 rounded-xl p-2.5 shadow-sm">
+              <span id="hours" class="font-cinzel text-xl sm:text-2xl font-bold text-gold-dark block">00</span>
+              <span class="font-sans text-[9px] uppercase tracking-wider text-warmgray">Hours</span>
+            </div>
+            <div class="bg-white/80 border border-gold/30 rounded-xl p-2.5 shadow-sm">
+              <span id="minutes" class="font-cinzel text-xl sm:text-2xl font-bold text-gold-dark block">00</span>
+              <span class="font-sans text-[9px] uppercase tracking-wider text-warmgray">Mins</span>
+            </div>
+            <div class="bg-white/80 border border-gold/30 rounded-xl p-2.5 shadow-sm">
+              <span id="seconds" class="font-cinzel text-xl sm:text-2xl font-bold text-gold-dark block">00</span>
+              <span class="font-sans text-[9px] uppercase tracking-wider text-warmgray">Secs</span>
+            </div>
+          </div>
+
+          <!-- Add to Calendar Quick Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5 mt-4">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony:+Ubaid+ur+Rehman+%26+Daughter+of+Nawaz+Qureshi&dates=20270112T160000Z/20270112T190000Z&details=Wedding+Celebration+at+Data+Hall+(C),+Karachi&location=Data+Hall+(C),+Coast+Guard+Chowrangi+Korangi+2+1/2+Karachi" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-rosewood hover:border-gold hover:bg-gold-light/20 transition-all text-xs font-sans font-medium shadow-sm">
+              <i data-lucide="calendar-plus" class="w-3.5 h-3.5 text-gold-dark"></i>
+              <span>Google Calendar</span>
+            </a>
+            <button onclick="downloadICS()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gold/40 text-rosewood hover:border-gold hover:bg-gold-light/20 transition-all text-xs font-sans font-medium shadow-sm">
+              <i data-lucide="download" class="w-3.5 h-3.5 text-gold-dark"></i>
+              <span>Apple / iCal File</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wedding Program Timeline (3 Key Events from Card) -->
+      <div class="py-6 px-6 sm:px-10 scroll-reveal">
+        <h3 class="font-cinzel text-sm sm:text-base font-bold tracking-[0.25em] uppercase text-rosewood mb-1">
+          Event Timeline
+        </h3>
+        <p class="font-serif italic text-xs text-warmgray mb-6">Program for the auspicious evening</p>
+
+        <div class="space-y-4 max-w-md mx-auto text-left">
+          
+          <!-- Event 1: Barat -->
+          <div class="flex items-center gap-4 p-3.5 rounded-xl bg-white/70 border border-gold/30 shadow-sm hover:border-gold transition-all scroll-reveal stagger-1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-gold-dark to-gold-metallic text-white flex items-center justify-center flex-shrink-0 shadow-md">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-cinzel font-bold text-sm text-rosewood">Arrival of Barat</h4>
+                <span class="font-cinzel text-xs font-bold text-gold-dark bg-blush px-2.5 py-0.5 rounded-full border border-gold/30">09:00 PM</span>
+              </div>
+              <p class="font-sans text-xs text-warmgray mt-0.5">Grand welcome of the groom &amp; procession</p>
+            </div>
+          </div>
+
+          <!-- Event 2: Dinner -->
+          <div class="flex items-center gap-4 p-3.5 rounded-xl bg-white/70 border border-gold/30 shadow-sm hover:border-gold transition-all scroll-reveal stagger-2">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#9e6f3b] to-[#d4af37] text-white flex items-center justify-center flex-shrink-0 shadow-md">
+              <i data-lucide="utensils" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-cinzel font-bold text-sm text-rosewood">Royal Dinner</h4>
+                <span class="font-cinzel text-xs font-bold text-gold-dark bg-blush px-2.5 py-0.5 rounded-full border border-gold/30">10:00 PM</span>
+              </div>
+              <p class="font-sans text-xs text-warmgray mt-0.5">Sumptuous banquet &amp; traditional delicacies</p>
+            </div>
+          </div>
+
+          <!-- Event 3: Rukhsati -->
+          <div class="flex items-center gap-4 p-3.5 rounded-xl bg-white/70 border border-gold/30 shadow-sm hover:border-gold transition-all scroll-reveal stagger-3">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#69443c] to-[#a86558] text-white flex items-center justify-center flex-shrink-0 shadow-md">
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-cinzel font-bold text-sm text-rosewood">Rukhsati</h4>
+                <span class="font-cinzel text-xs font-bold text-gold-dark bg-blush px-2.5 py-0.5 rounded-full border border-gold/30">11:30 PM</span>
+              </div>
+              <p class="font-sans text-xs text-warmgray mt-0.5">Prayers, blessings &amp; emotional farewell</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Venue & Location Section -->
+      <div class="py-6 px-6 sm:px-10 bg-blush/40 border-y border-gold/25 scroll-reveal">
+        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold-dark mx-auto flex items-center justify-center mb-3">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-cinzel text-sm sm:text-base font-bold tracking-[0.25em] uppercase text-rosewood mb-1">
+          Wedding Venue
+        </h3>
+        <p class="font-cinzel text-lg sm:text-xl font-bold text-gold-dark tracking-wider uppercase mt-1">
+          DATA HALL (C)
+        </p>
+        <p class="font-sans text-xs sm:text-sm font-medium text-rosewood/80 max-w-xs mx-auto mt-1 leading-relaxed">
+          Coast Guard Chowrangi, Korangi # 2 ½, Karachi
+        </p>
+
+        <!-- Interactive Google Map Button -->
+        <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
+          <a href="https://www.google.com/maps/search/?api=1&query=Data+Hall+Coast+Guard+Chowrangi+Korangi+Karachi" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-rosewood text-[#fdfbf7] text-xs font-cinzel font-bold tracking-widest uppercase hover:bg-gold-dark transition-all shadow-md">
+            <i data-lucide="navigation" class="w-3.5 h-3.5 text-gold-metallic"></i>
+            <span>Get Directions in Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Awaiting To Welcome Section (From Physical Card) -->
+      <div class="py-8 px-6 sm:px-10 bg-gradient-to-b from-transparent via-[#fbf7f0] to-transparent scroll-reveal">
+        <span class="font-script text-3xl sm:text-4xl text-rosewood block mb-1">Awaiting to Welcome</span>
+        <h3 class="font-cinzel text-sm sm:text-base font-bold tracking-[0.25em] uppercase text-gold-dark mb-5">
+          All Family Members
+        </h3>
+
+        <!-- Direct Phone & WhatsApp Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto">
+          <div class="p-4 rounded-xl bg-white border border-gold/40 shadow-sm flex items-center justify-between hover:border-gold transition-all scroll-reveal stagger-1">
+            <div class="text-left">
+              <span class="text-[10px] font-sans uppercase tracking-wider text-warmgray block">Contact Person</span>
+              <span class="font-cinzel font-bold text-sm text-rosewood">0310-3006414</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="tel:03103006414" class="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center hover:bg-emerald-100 transition-colors shadow-xs" title="Call">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </a>
+              <a href="https://wa.me/923103006414?text=Salam!%20Congratulations%20on%20the%20wedding%20of%20Ubaid%20ur%20Rehman%20and%20Daughter%20of%20Nawaz%20Qureshi!%20" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors shadow-xs" title="WhatsApp">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-gold/40 shadow-sm flex items-center justify-between hover:border-gold transition-all scroll-reveal stagger-2">
+            <div class="text-left">
+              <span class="text-[10px] font-sans uppercase tracking-wider text-warmgray block">Contact Person</span>
+              <span class="font-cinzel font-bold text-sm text-rosewood">0334-8309156</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="tel:03348309156" class="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center hover:bg-emerald-100 transition-colors shadow-xs" title="Call">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </a>
+              <a href="https://wa.me/923348309156?text=Salam!%20Congratulations%20on%20the%20wedding%20of%20Ubaid%20ur%20Rehman%20and%20Daughter%20of%20Nawaz%20Qureshi!%20" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700 transition-colors shadow-xs" title="WhatsApp">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Guest Wishes Board -->
+      <div class="py-6 px-6 sm:px-10 bg-[#f9f5ef] border-t border-gold/30 scroll-reveal">
+        <div class="font-cinzel text-xs tracking-[0.25em] uppercase text-gold-dark font-bold mb-1">
+          Prayers &amp; Wishes
+        </div>
+        <p class="font-serif italic text-xs text-warmgray mb-4">Leave your heartfelt blessings for the newly weds</p>
+
+        <!-- Wishes List -->
+        <div id="wishesList" class="space-y-3 max-w-md mx-auto text-left max-h-60 overflow-y-auto pr-1">
+          <!-- Default Wish 1 -->
+          <div class="p-3 rounded-xl bg-white border border-gold/30 shadow-xs">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-cinzel font-bold text-xs text-rosewood">Family &amp; Elders</span>
+              <span class="text-[10px] text-warmgray">Karachi</span>
+            </div>
+            <p class="font-serif text-xs italic text-rosewood/80">"Bārakallāhu laka wa bāraka 'alayka wa jama'a baynakumā fī khayr. Heartiest congratulations to Ubaid and family!"</p>
+          </div>
+          <!-- Default Wish 2 -->
+          <div class="p-3 rounded-xl bg-white border border-gold/30 shadow-xs">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-cinzel font-bold text-xs text-rosewood">Uncle Tariq &amp; Family</span>
+              <span class="text-[10px] text-warmgray">Confirmed</span>
+            </div>
+            <p class="font-serif text-xs italic text-rosewood/80">"Looking forward to celebrating this beautiful day with you all. May Allah bless the couple with abundant love!"</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Share & Download Bar -->
+      <div class="py-6 px-6 sm:px-10 bg-white border-t border-gold/25 flex flex-wrap items-center justify-center gap-3">
+        <!-- WhatsApp Share -->
+        <button onclick="shareViaWhatsApp()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600 text-white font-sans text-xs font-semibold hover:bg-emerald-700 transition-all shadow-sm">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>Share Invitation</span>
+        </button>
+
+        <!-- Copy Link -->
+        <button onclick="copyInviteLink()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blush border border-gold/40 text-rosewood font-sans text-xs font-semibold hover:border-gold transition-all shadow-sm">
+          <i data-lucide="copy" class="w-3.5 h-3.5 text-gold-dark"></i>
+          <span id="copyLinkText">Copy Link</span>
+        </button>
+
+        <!-- Back to Cover Button -->
+        <button onclick="closeInvitation()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f9f3ea] border border-gold/60 text-[#1a3826] font-cinzel text-xs font-bold hover:border-gold transition-all shadow-sm">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-gold-dark"></i>
+          <span>Back to Main Page</span>
+        </button>
+      </div>
+
+      <!-- Footer Stamp -->
+      <footer class="py-6 bg-[#211b19] text-[#e0d6cb] text-center text-xs font-serif border-t border-gold/40">
+        <p class="font-cinzel tracking-[0.25em] text-[10px] uppercase text-gold-light mb-1">
+          Daughter of Nawaz Qureshi &amp; Ubaid ur Rehman
+        </p>
+        <p class="text-[11px] opacity-60 font-sans tracking-wider">
+          Tuesday, 12 January 2027 • Data Hall (C), Karachi
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. FULL IMAGE MODAL -->
+  <!-- ========================================================================= -->
+  <div id="photoModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden" onclick="closePhotoModal()">
+    <div class="relative max-w-lg w-full bg-[#fdfbf7] rounded-2xl overflow-hidden p-2 shadow-2xl border border-gold/40" onclick="event.stopPropagation()">
+      <button onclick="closePhotoModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-black transition-colors z-10 shadow-md">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <img src="images/pakistani_couple.jpg" alt="Royal Pakistani Wedding Artwork" class="w-full max-h-[85vh] object-cover rounded-xl shadow-inner">
+      <div class="text-center py-2.5">
+        <p class="font-cinzel text-xs uppercase tracking-[0.25em] text-gold-dark font-bold">Ubaid ur Rehman &amp; Daughter of Nawaz Qureshi</p>
+        <p class="font-serif italic text-xs text-warmgray">Tuesday, 12 January 2027 • Karachi</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT LOGIC (MUSIC, COUNTDOWN, CONFETTI, GUESTBOOK, RSVP) -->
+  <!-- ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Elements
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    const soundBars = document.getElementById('soundBars');
+    const musicStatusText = document.getElementById('musicStatusText');
+    const musicIcon = document.getElementById('musicIcon');
+    const openingModal = document.getElementById('openingModal');
+    const openInviteBtn = document.getElementById('openInviteBtn');
+
+    let isPlaying = false;
+
+    // Music Toggle Function
+    function toggleMusic() {
+      if (bgMusic.paused) {
+        bgMusic.play().then(() => {
+          isPlaying = true;
+          soundBars.classList.remove('paused');
+          musicStatusText.textContent = 'Playing';
+          musicIcon.setAttribute('data-lucide', 'volume-2');
+          lucide.createIcons();
+        }).catch(err => {
+          console.log('Autoplay prevented or waiting for interaction:', err);
+        });
+      } else {
+        bgMusic.pause();
+        isPlaying = false;
+        soundBars.classList.add('paused');
+        musicStatusText.textContent = 'Muted';
+        musicIcon.setAttribute('data-lucide', 'volume-x');
+        lucide.createIcons();
+      }
+    }
+
+    musicToggle.addEventListener('click', toggleMusic);
+
+    // Open Invitation Function (Envelope transition + Music + Confetti)
+    function openInvitation() {
+      // 1. Play Music
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        soundBars.classList.remove('paused');
+        musicStatusText.textContent = 'Playing';
+        musicIcon.setAttribute('data-lucide', 'volume-2');
+        lucide.createIcons();
+      }).catch(err => console.log('Audio playback info:', err));
+
+      // 2. Confetti Burst
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#c5a059', '#d4af37', '#e8c5b8', '#ffffff']
+        });
+        setTimeout(() => {
+          confetti({
+            particleCount: 50,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: ['#c5a059', '#d4af37', '#dfb1a1']
+          });
+          confetti({
+            particleCount: 50,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: ['#c5a059', '#d4af37', '#dfb1a1']
+          });
+        }, 400);
+      }
+
+      // 3. Smooth Envelope Transition
+      openingModal.classList.add('opened');
+      triggerInitialReveals();
+      setTimeout(() => {
+        openingModal.style.display = 'none';
+      }, 1200);
+    }
+
+    // Return / Back to Cover Page Function
+    function closeInvitation() {
+      openingModal.style.display = 'flex';
+      void openingModal.offsetWidth; // Trigger DOM reflow for CSS transition
+      openingModal.classList.remove('opened');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    openInviteBtn.addEventListener('click', openInvitation);
+
+    // Background floating petal generator
+    function createPetal(containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      const size = Math.random() * 14 + 10;
+      petal.style.width = size + 'px';
+      petal.style.height = size + 'px';
+      petal.style.left = (Math.random() * 100) + 'vw';
+      petal.style.animationDuration = (Math.random() * 6 + 6) + 's';
+      petal.style.animationDelay = (Math.random() * 2) + 's';
+      container.appendChild(petal);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 12000);
+    }
+
+    setInterval(() => createPetal('introPetals'), 700);
+    setInterval(() => createPetal('mainPetals'), 1500);
+
+    // Real-time Countdown Timer (Target: 12 January 2027, 21:00 PKT)
+    const targetDate = new Date('2027-01-12T21:00:00+05:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = String(days).padStart(2, '0');
+      document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Photo Modal controls
+    function openPhotoModal() {
+      document.getElementById('photoModal').classList.remove('hidden');
+    }
+    function closePhotoModal() {
+      document.getElementById('photoModal').classList.add('hidden');
+    }
+
+    // Download iCal (.ics) file
+    function downloadICS() {
+      const icsContent = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Wedding Invitation//EN',
+        'BEGIN:VEVENT',
+        'UID:' + Date.now() + '@weddinginvite',
+        'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z',
+        'DTSTART:20270112T160000Z',
+        'DTEND:20270112T190000Z',
+        'SUMMARY:Wedding: Ubaid ur Rehman & Daughter of Nawaz Qureshi',
+        'DESCRIPTION:Wedding Ceremony at Data Hall (C), Coast Guard Chowrangi, Korangi 2 1/2, Karachi. Barat: 9:00 PM, Dinner: 10:00 PM, Rukhsati: 11:30 PM.',
+        'LOCATION:Data Hall (C), Coast Guard Chowrangi, Korangi 2 1/2, Karachi',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'wedding-invitation-ubaid.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Share via WhatsApp
+    function shareViaWhatsApp() {
+      const shareText = `*Wedding Invitation*%0A%0AYou are cordially invited to celebrate the Wedding Ceremony of *Ubaid ur Rehman* with *Daughter of Nawaz Qureshi* on *Tuesday, 12 January 2027* at *Data Hall (C), Karachi*.%0A%0AView the complete musical digital invitation here!`;
+      window.open(`https://wa.me/?text=${shareText}`, '_blank');
+    }
+
+    // Copy Invite Link
+    function copyInviteLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const textSpan = document.getElementById('copyLinkText');
+        textSpan.textContent = 'Link Copied!';
+        setTimeout(() => {
+          textSpan.textContent = 'Copy Link';
+        }, 2500);
+      }).catch(() => {
+        alert('Invitation link: ' + window.location.href);
+      });
+    }
+
+    // Scroll Observer for Smooth Scroll Animations
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    document.querySelectorAll('.scroll-reveal, .scroll-scale').forEach(el => {
+      scrollObserver.observe(el);
+    });
+
+    function triggerInitialReveals() {
+      setTimeout(() => {
+        document.querySelectorAll('.scroll-reveal, .scroll-scale').forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight) {
+            el.classList.add('is-visible');
+          }
+        });
+      }, 300);
+    }
+  </script>
+</body>
+</html>
